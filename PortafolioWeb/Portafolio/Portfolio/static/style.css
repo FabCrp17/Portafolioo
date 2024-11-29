@@ -1,0 +1,60 @@
+
+header {
+    width: 100%;
+    height: 100vh; /* Hace que el header tenga al menos el tamaño completo de la pantalla */
+}
+
+.header-container {
+    height: 750px;
+    background-image: url('/static/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}   
+
+.navbar {
+    background-color: #0b1c1e;
+}
+
+.container-typing {
+    animation: 
+        animacion 2.9s steps(35) infinite alternate, /* Repetir la animación constantemente */
+        trasparent 0.5s step-end infinite alternate; /* Animación del cursor */
+    width: 12.1em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes animacion {
+    from {
+        width: 0px; /* Comienza con el ancho en 0 */
+    }
+    to {
+        width: 12.1em; /* Ancho total del texto */
+    }
+}
+
+@keyframes trasparent {
+    50% {
+        border-color: transparent; /* Parpadeo del cursor */
+    }
+}
+
+.butonc:hover{
+    transform: scale(1.05);
+}
+
+.nav-item:hover{
+    transform: scale(1.05);
+}
+
+.nav-item {
+    margin-right: 12px; /* Ajusta el espacio entre los elementos */
+}
+.nav-item:last-child {
+    margin-right: 0; /* Evita margen extra en el último elemento */
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Cambia a blanco */
+}
+
